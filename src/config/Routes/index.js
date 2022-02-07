@@ -5,6 +5,7 @@ import Register from '../../pages/auth/register';
 import MainApp from '../../pages/mainApp';
 import About from '../../pages/web/about';
 import CreateBlog from '../../pages/web/createBlog';
+import DetailPost from '../../pages/web/detailPost';
 import Home from '../../pages/web/home';
 
 const Routers = () => {
@@ -14,6 +15,7 @@ const Routers = () => {
             <Route path="/" element={<MainApp children={<Home/>}/>} />
             <Route path="/about" element={<MainApp children={<About/>}/>} />
             <Route path="/create-blog" element={<MainApp children={<CreateBlog/>}/>} />
+            <Route path="/detail-post" element={<MainApp children={<DetailPost/>}/>} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
         </Routes>

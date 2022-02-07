@@ -1,5 +1,8 @@
 import React from 'react';
 import Logo from '../../../../src/assets/images/logo.svg';
+import IgIcon from '../../../../src/assets/icons/ig.png';
+import FbIcon from '../../../../src/assets/icons/fb.png';
+import MailIcon from '../../../../src/assets/icons/mail.png';
 import './footer.scss';
 
 const Icon = (props) => {
@@ -19,9 +22,9 @@ const Footer = () => {
             </div>
             <div className='social-wrapper'>
                 <Icon img={Logo} />
-                <Icon img={Logo} />
-                <Icon img={Logo} />
-                <Icon img={Logo} />
+                <Icon img={IgIcon} />
+                <Icon img={FbIcon} />
+                <Icon img={MailIcon} />
             </div>                
         </div>
         <div className='copyright'>
