@@ -1,5 +1,9 @@
 const initialHomeState = {
-    dataPost: []
+    dataPost: [],
+    page: {
+        currentPage: 1,
+        totalPage: 1
+    }
 }   
 
 const homeReducer = (state = initialHomeState,action) => {
@@ -7,6 +11,12 @@ const homeReducer = (state = initialHomeState,action) => {
         return {
             ...state,
             dataPost: action.payload
+        }
+    }
+    if(action.type == 'UPDATE_PAGE'){
+        return {
+            ...state,
+            page: action.payload
         }
     }
 

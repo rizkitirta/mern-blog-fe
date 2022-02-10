@@ -9,15 +9,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDataPost } from '../../../config/Redux/Actions';
 
 function Home() {
-    const { dataPost, author } = useSelector(state => state.homeReducer) /**Call Global State With Spesific Reducer */
+    const { dataPost, author, page} = useSelector(state => state.homeReducer) /**Call Global State With Spesific Reducer */
     const globalState = useSelector(state => state) /**Call Global State With All Reducer */
+    const [counter, setcounter] = useState(1)
     const dispatch = useDispatch()
+    const navigate = useNavigate();
 
     useEffect(() => {
-        dispatch(setDataPost())
-    }, [dispatch])
+        dispatch(setDataPost(counter))
+    }, [dispatch,counter])
 
-    const navigate = useNavigate();
+    const previous = () => {
+        setcounter(counter <= 1 ? 1 : counter -1)
+    }
+    const next = () => {
+        setcounter(counter == page.totalPage ? page.totalPage : counter +1)
+        console.log(counter)
+    }
     return (
         <div className='home-page-wrapper'>
             <div className='create-wrapper'>
@@ -40,9 +48,11 @@ function Home() {
                 }
             </div>
             <div className='content-paginate'>
-                <Button title="Previous" />
+                <Button title="Previous" onClick={previous}/>
                 <Gap width={20} />
-                <Button title="Next" />
+                <p className='text-page'>{counter} / {page.totalPage}</p>
+                <Gap width={20} />
+                <Button title="Next" onClick={next} />
             </div>
             <Gap height={20} />
         </div>
