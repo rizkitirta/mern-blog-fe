@@ -5,10 +5,14 @@ import Input from '../../../components/atoms/input';
 import TextArea from '../../../components/atoms/textarea';
 import Upload from '../../../components/atoms/upload';
 import './createBlog.scss';
+import {useNavigate} from 'react-router-dom';
+import Link from '../../../components/atoms/link';
 
 const CreateBlog = () => {
+  const navigate = useNavigate();
   return (
       <div className='blog-post'>
+          <Link title="back" onClick={() => navigate('/')}/>
           <p className='title'>Create Blog</p>
           <Input label='Title'/>
           <Upload/>

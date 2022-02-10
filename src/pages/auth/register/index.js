@@ -5,10 +5,10 @@ import Input from '../../../components/atoms/input';
 import Button from '../../../components/atoms/button';
 import Gap from '../../../components/atoms/gap';
 import Link from '../../../components/atoms/link';
-
-
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <div className='main-page'>
       <div className='left'>
@@ -24,7 +24,7 @@ const Register = () => {
         <Gap height={20}/>
         <Button title='Register'/>
         <Gap height={20}/>
-        <Link title='Kembali Ke Login'/>
+        <Link title='Kembali Ke Login' onClick={() => navigate('/login')}/>
       </div>
     </div>
   )
