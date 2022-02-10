@@ -4,7 +4,6 @@ import BlogItem from '../../../components/molecules/blogItem';
 import './home.scss'
 import Gap from '../../../components/atoms/gap';
 import { useNavigate } from 'react-router-dom';
-import Axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataPost } from '../../../config/Redux/Actions';
 
@@ -47,10 +46,13 @@ function Home() {
                     })
                 }
             </div>
+
+            <Gap height={20} />
+            <div className='text-page'>{counter} / {page.totalPage}</div>
+            <Gap height={10} />
+            
             <div className='content-paginate'>
-                <Button title="Previous" onClick={previous}/>
-                <Gap width={20} />
-                <p className='text-page'>{counter} / {page.totalPage}</p>
+                <Button title="Previous" onClick={previous}/> 
                 <Gap width={20} />
                 <Button title="Next" onClick={next} />
             </div>
