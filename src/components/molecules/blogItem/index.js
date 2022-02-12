@@ -8,7 +8,7 @@ import './blog.scss';
 const BlogItem = (props) => {
   const navigate = useNavigate()
   return (
-    <div className='blog-item' onClick={() => navigate('/detail-post')}>
+    <div className='blog-item' onClick={() => navigate(`/detail-post/${props._id}`)}>
         <img className='image-thumb' src={props.image} />
         <div className='content-detail'>
             <p className='title'>{props.title}</p>

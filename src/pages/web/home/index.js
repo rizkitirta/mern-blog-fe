@@ -41,7 +41,8 @@ function Home() {
                                 title={post.title} author={post.author.name}
                                 date={post.createdAt}
                                 content={post.content}
-                                key={post._id} />
+                                key={post._id} 
+                                _id={post._id} />
                         );
                     })
                 }
