@@ -18,7 +18,7 @@ const BlogItem = (props) => {
         <div className='actions'>
           <Link title="edit" onClick={() => navigate(`/edit-blog/${props._id}`)}></Link>
           <Gap width={10}/>
-          <Link title="delete" onClick={() => navigate(`/create-blog/${props._id}`)}></Link>
+          <Link title="delete" onClick={() => props.delete(props._id)}></Link>
         </div>
     </div>
   );
