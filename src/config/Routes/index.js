@@ -15,6 +15,7 @@ const Routers = () => {
             <Route path="/" element={<MainApp children={<Home/>}/>} />
             <Route path="/about" element={<MainApp children={<About/>}/>} />
             <Route path="/create-blog" element={<MainApp children={<CreateBlog/>}/>} />
+            <Route path="/edit-blog/:id" element={<MainApp children={<CreateBlog/>}/>} />
             <Route path="/detail-post/:id" element={<MainApp children={<DetailPost/>}/>} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>

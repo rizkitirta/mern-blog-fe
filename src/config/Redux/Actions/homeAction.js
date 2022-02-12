@@ -15,7 +15,7 @@ export const setDataPost = (page) => {
                     }
                 })
             })
-            .catch(err => {
+            .catch(err => { 
                 console.log(err)
             })
     }

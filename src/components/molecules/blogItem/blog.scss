@@ -33,4 +33,10 @@
             color: #353535;
         }
     }
+    .actions {
+        display: flex;
+        flex: wrap;
+        float: right;
+        padding: 15px;
+    }
 }
